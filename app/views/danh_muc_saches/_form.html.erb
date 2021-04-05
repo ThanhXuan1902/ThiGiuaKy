@@ -1,0 +1,47 @@
+<%= form_with(model: danh_muc_sach) do |form| %>
+  <% if danh_muc_sach.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(danh_muc_sach.errors.count, "error") %> prohibited this danh_muc_sach from being saved:</h2>
+
+      <ul>
+        <% danh_muc_sach.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ma_sach %>
+    <%= form.number_field :ma_sach %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ten_sach %>
+    <%= form.text_field :ten_sach %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ma_tac_gia %>
+    <%= form.text_field :ma_tac_gia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ma_the_loai %>
+    <%= form.text_field :ma_the_loai %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ma_nxb %>
+    <%= form.text_field :ma_nxb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nam_xuat_ban %>
+    <%= form.number_field :nam_xuat_ban %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

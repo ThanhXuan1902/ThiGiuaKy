@@ -1,0 +1,2 @@
+class TheLoaiSach < ApplicationRecord
+end

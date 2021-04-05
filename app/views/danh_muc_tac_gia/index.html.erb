@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Danh Muc Tac Gia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ma tac gia</th>
+      <th>Ten tac gia</th>
+      <th>Website</th>
+      <th>Ghi chu</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @danh_muc_tac_gia.each do |danh_muc_tac_gium| %>
+      <tr>
+        <td><%= danh_muc_tac_gium.ma_tac_gia %></td>
+        <td><%= danh_muc_tac_gium.ten_tac_gia %></td>
+        <td><%= danh_muc_tac_gium.website %></td>
+        <td><%= danh_muc_tac_gium.ghi_chu %></td>
+        <td><%= link_to 'Show', danh_muc_tac_gium %></td>
+        <td><%= link_to 'Edit', edit_danh_muc_tac_gium_path(danh_muc_tac_gium) %></td>
+        <td><%= link_to 'Destroy', danh_muc_tac_gium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Danh Muc Tac Gium', new_danh_muc_tac_gium_path %>

@@ -1,0 +1,2 @@
+class NhaXuatBan < ApplicationRecord
+end

@@ -1,0 +1,27 @@
+<%= form_with(model: the_loai_sach) do |form| %>
+  <% if the_loai_sach.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(the_loai_sach.errors.count, "error") %> prohibited this the_loai_sach from being saved:</h2>
+
+      <ul>
+        <% the_loai_sach.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ma_the_loai %>
+    <%= form.text_field :ma_the_loai %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ten_the_loai %>
+    <%= form.text_field :ten_the_loai %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

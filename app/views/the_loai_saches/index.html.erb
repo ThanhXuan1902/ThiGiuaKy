@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>The Loai Saches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ma the loai</th>
+      <th>Ten the loai</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @the_loai_saches.each do |the_loai_sach| %>
+      <tr>
+        <td><%= the_loai_sach.ma_the_loai %></td>
+        <td><%= the_loai_sach.ten_the_loai %></td>
+        <td><%= link_to 'Show', the_loai_sach %></td>
+        <td><%= link_to 'Edit', edit_the_loai_sach_path(the_loai_sach) %></td>
+        <td><%= link_to 'Destroy', the_loai_sach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New The Loai Sach', new_the_loai_sach_path %>

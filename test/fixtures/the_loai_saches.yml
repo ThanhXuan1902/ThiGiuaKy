@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ma_the_loai: 
+  ten_the_loai: MyString
+
+two:
+  ma_the_loai: 
+  ten_the_loai: MyString

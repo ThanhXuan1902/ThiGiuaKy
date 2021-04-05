@@ -1,0 +1,37 @@
+<%= form_with(model: danh_muc_tac_gium) do |form| %>
+  <% if danh_muc_tac_gium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(danh_muc_tac_gium.errors.count, "error") %> prohibited this danh_muc_tac_gium from being saved:</h2>
+
+      <ul>
+        <% danh_muc_tac_gium.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ma_tac_gia %>
+    <%= form.text_field :ma_tac_gia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ten_tac_gia %>
+    <%= form.text_field :ten_tac_gia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :website %>
+    <%= form.text_field :website %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ghi_chu %>
+    <%= form.text_area :ghi_chu %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

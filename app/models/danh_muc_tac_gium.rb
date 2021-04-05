@@ -1,0 +1,2 @@
+class DanhMucTacGium < ApplicationRecord
+end

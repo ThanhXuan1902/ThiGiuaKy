@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ma nxb:</strong>
+  <%= @nha_xuat_ban.ma_nxb %>
+</p>
+
+<p>
+  <strong>Ten nxb:</strong>
+  <%= @nha_xuat_ban.ten_nxb %>
+</p>
+
+<p>
+  <strong>Dia chi:</strong>
+  <%= @nha_xuat_ban.dia_chi %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @nha_xuat_ban.email %>
+</p>
+
+<p>
+  <strong>Thong tin nguoi dai dien:</strong>
+  <%= @nha_xuat_ban.thong_tin_nguoi_dai_dien %>
+</p>
+
+<%= link_to 'Edit', edit_nha_xuat_ban_path(@nha_xuat_ban) %> |
+<%= link_to 'Back', nha_xuat_bans_path %>
